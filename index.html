@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Book of Answers</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      .perspective-2000 { perspective: 2500px; }
+      .transform-style-3d { transform-style: preserve-3d; }
+      .backface-hidden { backface-visibility: hidden; }
+      .rotate-y-180 { transform: rotateY(-180deg); }
+      
+      .book-shadow {
+        box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 20px rgba(139, 92, 246, 0.2);
+      }
+
+      .paper-texture {
+        background-color: #F4ECD8;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+      }
+
+      .filigree-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0C13.43 0 0 13.43 0 30s13.43 30 30 30 30-13.43 30-30S46.57 0 30 0zm0 58C14.56 58 2 45.44 2 30S14.56 2 30 2s28 12.56 28 28-12.56 28-28 28z' fill='%23d4af37' fill-opacity='0.05'/%3E%3C/svg%3E");
+      }
+
+      .spine-shadow-left {
+        background: linear-gradient(to left, rgba(29, 11, 59, 0.4) 0%, rgba(29, 11, 59, 0.1) 15%, transparent 30%);
+      }
+      .spine-shadow-right {
+        background: linear-gradient(to right, rgba(29, 11, 59, 0.4) 0%, rgba(29, 11, 59, 0.1) 15%, transparent 30%);
+      }
+
+      .shiny-text {
+        background: linear-gradient(to right, #d4af37 20%, #f9f1d0 40%, #f9f1d0 60%, #d4af37 80%);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+      }
+
+      .glow-border {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(212, 175, 55, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-mystic-950 text-gray-100 overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
